@@ -10,7 +10,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-require("dotenv").config();
 
 //Adding New Books to Database
 
