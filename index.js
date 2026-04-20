@@ -197,7 +197,7 @@ try {
 }
 }
 
-app.post("/books/rating/:bookTitle", async (req,res)=>{
+app.post("/books/rating/title/:bookTitle", async (req,res)=>{
 try {
     const updatedBookRatingByTitle = await updateBookRatingByTitle(req.params.bookTitle, req.body);
     if (!updatedBookRatingByTitle) {
