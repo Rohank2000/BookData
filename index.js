@@ -189,7 +189,7 @@ try {
 
 const updateBookRatingByTitle = async (bookTitle, updateRatingByTitle)=>{
 try {
-    const BookRatingByTitle = await bookModel.findOneAndUpdate(bookTitle, updateRatingByTitle, {new:true});
+    const BookRatingByTitle = await bookModel.findOneAndUpdate({title:bookTitle}, updateRatingByTitle, {new:true});
     console.log(BookRatingByTitle);
     return BookRatingByTitle;
 } catch (error) {
