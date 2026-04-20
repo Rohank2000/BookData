@@ -138,7 +138,7 @@ res.status(200).json({message:"Book Data Fetched using Genre.", readingBooksByGe
 
 const readBooksByYear = async (year) => {
   try {
-    const BooksByYear = await bookModel.findOne({ releaseYear: year });
+    const BooksByYear = await bookModel.findOne({ publishedYear: year });
     console.log(BooksByYear);
     return BooksByYear;
   } catch (error) {
